@@ -1,0 +1,36 @@
+// draw boxes over camera
+
+
+			cp		camera_scale 	screen_3
+			cp		camera_x		screen_0
+			cp		camera_y		screen_0			//initalize values
+
+loop			call		camera		camlocation
+			
+			// Draw rectangles
+			cp		vga_x1				screen_x1
+			cp		vga_y1				screen_y1
+			cp		vga_x2				screen_x2
+			cp		vga_y2				screen_y2
+			cp		vga_color_write		screen_color
+			call		vga_draw_rect			vga_return
+			
+			
+			// return loop
+			//be		loop			screen_0		screen_0
+			
+				
+				
+
+// variables
+screen_0		.data	0
+screen_3		.data	3
+
+screen_x1		.data	0
+screen_y1		.data	280
+screen_x2		.data	50
+screen_y2		.data	300
+screen_color	.data	224
+
+#include ../camera.e
+#include ../vga.e

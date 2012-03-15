@@ -1,0 +1,10 @@
+vga_disp	0
+vga_wait_1	28
+vga_wait_2	40
+vga_x	52
+vga_y	53
+vga_color_write	54
+vga_return	55
+vga_response	56
+vga_0	57
+vga_1	58

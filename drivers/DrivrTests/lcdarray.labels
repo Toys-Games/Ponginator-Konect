@@ -1,0 +1,13 @@
+loop	0
+lcd_x	20
+lcd_y	21
+lcd_ascii	22
+ascii_table	23
+linetotal	31
+one	32
+location	33
+lcd	34
+lcdready2go	50
+lcdon	66
+lcdoff	67
+lcdresponse	68

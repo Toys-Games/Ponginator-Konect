@@ -1,0 +1,29 @@
+				cp		camera_x	zero
+				cp		camera_y	zero
+loop			call	camera		camlocation
+				add		camera_x	dx				camera_x
+				add		camera_y	dy				camera_y
+				add		checkx		xsiz			camera_x
+				add		checky		ysiz			camera_y
+				blt		flipx		xmax			checkx
+				blt		flipy		ymax			checky
+				blt		flipx		camera_x		zero
+				blt		flipy		camera_y		zero
+				be		loop		0				0
+				halt
+flipx			mult	dx			dx			negone
+				be		loop		0			0
+flipy			mult	dy			dy			negone
+				be		loop		0			0
+zero			.data	0
+negone			.data	-1
+checkx			.data	0
+checky			.data	0
+xsiz			.data	320
+ysiz			.data	240
+xmax			.data	640
+ymax			.data	480
+dx				.data	1
+dy				.data	1
+
+#include ../camera.e

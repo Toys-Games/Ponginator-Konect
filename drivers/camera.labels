@@ -1,0 +1,5 @@
+camera	0
+camwait2receive	16
+cameraon	32
+cameraoff	33
+camresponse	34

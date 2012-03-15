@@ -1,0 +1,5 @@
+lcd	0
+lcdready2go	16
+lcdon	32
+lcdoff	33
+lcdresponse	34

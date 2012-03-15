@@ -1,0 +1,12 @@
+keyboard					out		20		keyon //sets keyboard on
+keywait2receive			in		21		keyresponse
+							bne	keywait2receive	keyresponse	keyon
+							out		20					keyoff
+							ret 		location
+							in		22		keypress
+							in		23		key_ascii
+
+keyon		.data	1
+keyoff		.data	0
+keyresponse	.data	0			
+

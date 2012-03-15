@@ -1,0 +1,26 @@
+//BEGIN DRIVER
+camera				out		134				camera_scale		//if line 9 is commented, remove the label
+					out		132				camera_x
+					out		133				camera_y
+					out		130				cameraon					//Set camera_command to on
+camwait2receive		in		131				camresponse					//wait for camera response
+					bne		camwait2receive	camresponse	cameraon
+					out		130				cameraoff					//Set camera_command to off
+					ret		camlocation
+//DATA
+cameraon			.data	1
+cameraoff			.data	0
+camresponse			.data	0
+
+//USER MUST INPUT THESE
+camera_scale	.data	2
+camera_x		.data	0
+camera_y		.data	0
+camlocation		.data	0
+
+// TESTING VARIABLES
+// camera_scale		.data	0									//Size of input; 0:80x60, 1:160x120, 2:320x240, 3:640x480, uncomment for testing.`
+// camera_x			.data	0									//Current x-coordinate, uncomment for testing. Should be set outside driver.
+// camera_y			.data	0									//Current y-coordinate, uncomment for testing. Should be set outside driver.
+
+
